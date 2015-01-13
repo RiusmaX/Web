@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+	<meta charset="utf-8">
+	<title>Lightbox 2</title>
+
+	<link rel="shortcut icon" type="image/ico" href="images/favicon.gif" />	
+	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+</head>
+<body>
+
+
+
+<div id="content">
+
+<div class="section" id="example">
+
+
+	<h2>Examples</h2>
+
+	<h3>Single image</h3>
+  <div class="imageRow">
+  	<div class="single">
+  		<a href="images/examples/image-1.jpg" rel="lightbox"><img src="images/examples/image-1.jpg" width="150px;" height="150px;" alt="" /></a>
+  	</div>
+  	<div class="single">
+  		<a href="images/examples/image-2.jpg" rel="lightbox"><img src="images/examples/image-2.jpg" width="150px;" height="150px;" alt="" /></a>
+  	</div>
+  </div>
+
+	<h3 style="clear: both;">Image set</h3>
+
+  <div class="imageRow">
+  	<div class="set">
+  	  <div class="single first">
+  		  <a href="images/examples/image-3.jpg" rel="lightbox[plants]"><img src="images/examples/image-3.jpg" width="150px;" height="150px;"/></a>
+  		</div>
+      <div class="single">
+  		  <a href="images/examples/image-4.jpg" rel="lightbox[plants]" ><img src="images/examples/image-4.jpg"  width="150px;" height="150px;"/></a>
+      </div>
+      <div class="single">
+  		  <a href="images/examples/image-5.jpg" rel="lightbox[plants]"><img src="images/examples/image-5.jpg" width="150px;" height="150px;"/></a>
+      </div>
+      <div class="single last">
+  		  <a href="images/examples/image-6.jpg" rel="lightbox[plants]"><img src="images/examples/image-6.jpg" width="150px;" height="150px;"/></a>
+      </div>
+  	</div>
+  </div>
+	
+</div>
+
+</div><!-- end #content -->
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+<script src="js/lightbox.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+      $('a').smoothScroll({
+        speed: 1000,
+        easing: 'easeInOutCubic'
+      });
+
+      $('.showOlderChanges').on('click', function(e){
+        $('.changelog .old').slideDown('slow');
+        $(this).fadeOut();
+        e.preventDefault();
+      })
+  });
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2196019-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
